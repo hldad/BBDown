@@ -15,12 +15,12 @@ namespace BBDown.Core
         private static readonly string API = "https://grpc.biliapi.net/bilibili.app.playurl.v1.PlayURL/PlayView";
         private static readonly string API2 = "https://app.bilibili.com/bilibili.pgc.gateway.player.v2.PlayURL/PlayView";
         private static readonly string dalvikVer = "2.1.0";
-        private static readonly string osVer = "11";
+        private static readonly string osVer = "14";
         private static readonly string brand = "M2012K11AC";
-        private static readonly string model = "Build/RKQ1.200826.002";
-        private static readonly string appVer = "7.32.0";
-        private static readonly int build = 7320200; // 新版才能抓到配音
-        private static readonly string channel = "xiaomi_cn_tv.danmaku.bili_zm20200902";
+        private static readonly string model = "Build/RKQ1.240205.004";
+        private static readonly string appVer = "3.18.2";
+        private static readonly int build = 7420600; // 新版才能抓到配音
+        private static readonly string channel = "master";
         private static readonly Network.Types.TYPE networkType = Network.Types.TYPE.Wifi;
         private static readonly string networkOid = "46007";
         private static readonly string cronet = "1.36.1";
@@ -234,7 +234,7 @@ namespace BBDown.Core
             return new Dictionary<string, string>()
             {
                 ["Host"] = "grpc.biliapi.net",
-                ["user-agent"] = $"Dalvik/{dalvikVer} (Linux; U; Android {osVer}; {brand} {model}) {appVer} os/android model/{brand} mobi_app/android build/{build} channel/{channel} innerVer/{build} osVer/{osVer} network/2 grpc-java-cronet/{cronet}",
+                ["user-agent"] = $"Dalvik/{dalvikVer} (Linux; U; Android {osVer}; {brand} {model}) {appVer} os/android model/{brand} mobi_app/android build/{build} channel/{channel} innerVer/{build} osVer/{osVer} network/1 grpc-java-cronet/{cronet}",
                 ["te"] = "trailers",
                 ["x-bili-fawkes-req-bin"] = GenerateFawkesReqBin(),
                 ["x-bili-metadata-bin"] = GenerateMetadataBin(appkey),
